@@ -1,0 +1,18 @@
+<!-- 禁止 System.out.println -->
+<module name="RegexpSinglelineJava">
+    <property name="format" value="System\.out\.println"/>
+    <property name="message"
+        value="❌ 禁止 System.out.println.
+✅ FIX: private static final Logger log = LoggerFactory.getLogger(X.class);
+log.info(&quot;message {}&quot;, arg);
+📖 See: docs/conventions/logging.md"/>
+</module>
+
+<!-- 禁止 e.printStackTrace() -->
+<module name="RegexpSinglelineJava">
+    <property name="format" value="\.printStackTrace\(\)"/>
+    <property name="message"
+        value="❌ 禁止 e.printStackTrace().
+✅ FIX: log.error(&quot;context message&quot;, e);
+📖 See: docs/conventions/logging.md"/>
+</module>

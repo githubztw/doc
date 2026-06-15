@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "project": "Harness.Wpf.Demo",
+  "last_updated": "2026-06-07",
+  "features": [
+    {
+      "id": "F-001",
+      "title": "解决方案骨架与分层项目引用",
+      "priority": 1,
+      "status": "pending",
+      "acceptance": [
+        "Harness.Wpf.Demo.sln 中列出的各层项目均可 dotnet build",
+        "项目引用符合 Domain → … → Shell 方向"
+      ]
+    },
+    {
+      "id": "F-002",
+      "title": "Shell 启动与模块配置合并",
+      "priority": 2,
+      "status": "pending",
+      "acceptance": [
+        "appsettings.json 可覆盖各模块 module.settings.json",
+        "启动后主窗口可见，默认导航 Dashboard"
+      ]
+    },
+    {
+      "id": "F-003",
+      "title": "Dashboard 模块（问候与状态）",
+      "priority": 3,
+      "status": "pending",
+      "acceptance": [
+        "UC-01、UC-02 满足业务模型",
+        "IGreetingService / IAppStatusService 有 Services.Tests 覆盖"
+      ]
+    },
+    {
+      "id": "F-004",
+      "title": "Settings 模块（合并配置只读展示）",
+      "priority": 4,
+      "status": "pending",
+      "acceptance": [
+        "UC-03 满足业务模型",
+        "Settings 不直接读文件，经 ISettingsService"
+      ]
+    },
+    {
+      "id": "F-005",
+      "title": "ArchitectureTests（NetArchTest）",
+      "priority": 2,
+      "status": "pending",
+      "acceptance": [
+        "分层、ViewModel/View、Domain 无 WPF 等规则全绿",
+        "违规消息含 FIX 与文档路径"
+      ]
+    },
+    {
+      "id": "F-006",
+      "title": "scripts/verify.ps1 质量门",
+      "priority": 5,
+      "status": "in_progress",
+      "acceptance": [
+        "build + test + format 检查可一键执行",
+        "失败时退出码非 0"
+      ]
+    }
+  ]
+}

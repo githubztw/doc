@@ -1,0 +1,7 @@
+# Harness WPF Demo — 持久化进度（非上下文记忆）
+
+last_session: 2026-06-07
+last_actor: harness-cleanup
+summary: 已移除全部应用代码与 .sln；Demo/ 为纯驾驭层制品 + templates + scripts
+next_suggested_feature: F-001（按 init-agent-prompt.md 脚手架化）
+blockers: 无

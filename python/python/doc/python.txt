@@ -1,0 +1,18 @@
+python-snippets  智能代码补全
+
+
+python -m venv .venv  创建项目虚拟环境，每个项目最好都有各自的虚拟环境
+                                  pip 安装第三方模块时候，只会安装到当前项目的虚拟环境 中
+
+pip freeze > requirements.txt  创建requirements.txt 文件
+pip install -r requirements.txt  初始化项目所有包
+
+
+设置——》文本编译器
+     // 字体大小
+    "editor.fontSize": 16,
+    "editor.fontVariations": false,
+    //设置鼠标滚轮，改动字体大小
+    "editor.mouseWheelZoom": true,
+    //内置函数补全
+    "python.analysis.completeFunctionParens": true

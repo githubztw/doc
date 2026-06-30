@@ -214,6 +214,9 @@ echo $greeting  #hello there!
 echo ${greeting:6} #  there!
 echo ${greeting:6:3} # the 
 
+string="python scriptint language"
+echo ${string:17:-4} # lang
+
 #替换参数
 echo ${greeting/e/_} # h_llo there! 将第一个e替换成_
 echo ${greeting//e/_} # h_llo th_r_! 将所有的e替换成_

@@ -2,8 +2,6 @@
 
 # wsl 安装
 
-[scottsimpson/learning-bash-scripting: The repository for the course Learning Bash Scripting](https://github.com/scottsimpson/learning-bash-scripting)
-
 安装WSL:`wsl --install`
 
 安装 `ubuntu
@@ -62,8 +60,6 @@ cd /mnt/c/Users/13125/Desktop/test
 
      echo hello > file.txt
 
-     cat file1 file2 > fileAll
-
    + `>>`：追加到结尾
 
      echo hello > file.txt
@@ -84,7 +80,7 @@ cd /mnt/c/Users/13125/Desktop/test
 
 7. `cat fileName`：读取文件
 
-   cat file1 file2 > fileAll   合并file1 file2 两个文件覆盖fileAll   
+   **覆盖/合并：** cat file1 file2 > fileAll   合并file1 file2 两个文件覆盖fileAll   
 
 8. `grep 关键字 文件名`：检索根据关键字检索文件
 
@@ -101,7 +97,6 @@ cd /mnt/c/Users/13125/Desktop/test
    i 表示针对每一个要被删除的文件都提醒用户是否删除
 
 11. `clear`：清理信息
-11. `ls -a`:读取全部文件信息，-a表示读取全部文件
 
 
 
@@ -183,7 +178,7 @@ echo -n "Part of " echo "a statement"
 
 ## 2.1 展开
 
-### 2.1.1  {..}
+### 2.1.1  {..} ，成序列或字符串列表
 
 常常用于数据替换。可以用于笛卡尔数据生成
 
@@ -200,7 +195,7 @@ echo {a,b,c} # 简单枚举
 echo head -n1 {dir1,dir2,dir3}/lorem.txt
 ```
 
-### 2.1.2 `${}`：参数扩展
+### 2.1.2 `${}`：变量替换与参数扩展，对字符串操作的时候，必须使用 ${}
 
 ```bash
 # 定义变量。注意，= 两边不可以有空格
@@ -225,8 +220,9 @@ echo ${greeting//e/_} # h_llo th_r_! 将所有的e替换成_
 echo $greeting:4:3 #hello there!:4:3
 ```
 
-
 ### 2.1.3 $(...) 命令替换
+
+用于**执行一个子命令**，并将该命令的**标准输出**作为字符串替换到当前位置
 
 ```bash
 # 将命令嵌入到字符串中，运行的时候，可以直接将结果做位置替换。它可以式一个简单命令，也可以式一个复杂处理命令，如管道、重定向语句等
@@ -237,7 +233,7 @@ echo "the files $(ls)"
 
 ### 2.1.4 $(()) 算数求值
 
-> 注意：一般情况下bash只可以做整数运算
+> 注意：**整数算术运算**，支持赋值、加、减、乘、除、取余、位运算、逻辑运算等
 >
 > 可以通过算数求值的方式给变量重新赋值  ，如 :$((a=10))
 
